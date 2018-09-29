@@ -2,8 +2,102 @@
 <html lang="en">
 <head>
     <title>Homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'flashkicks_app/css/home.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+    <style>
+        body{
+            /* background-image: url(https://images.unsplash.com/photo-1538117546660-8eee17c37064?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=64ab9eaaccc45f2efa8e0852c6d4e578&auto=format&fit=crop&w=500&q=60); */
+            /* background-size: 100%; */
+            background-image: url(https://images.unsplash.com/photo-1514388614019-c755c395185c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52ee84aaf0d189ef9efa9a80ae411457&auto=format&fit=crop&w=1350&q=80);
+            background-repeat: no-repeat;
+            background-size: 1930px 1000px;
+        }
+
+        .header{
+            width: 1000px;
+            margin: auto;
+            margin-top: 150px;
+            color: white;
+            text-align: center;
+            font-family: 'VT323';
+            font-size: 130px;
+        }
+
+        .mission{
+            width: 300px;
+            margin: auto;
+            word-wrap: break-word;
+            color: yellow;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .flash{
+            
+            position: relative;
+            cursor: pointer;
+            width: 137px;
+            height: 160px;
+            left: 100px;
+            transition: left 5s cubic-bezier(.5, -1, .5, 2);
+            left: 0;
+            transition: left 5s cubic-bezier(0, .5, .5, 1);
+        }
+
+        .buttons{
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        button{
+            margin: 5px;
+        }
+        
+    </style>
+
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Flash Kicks</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+
+        <p>Flash Kicks</p>
+
+    </div>
+
+    <div class="mission">
+        <p>A one stop shop for sneakerheads all around the world to sell and buy their favorite sneakers. </p>
+        <img class="flash" src="http://getdrawings.com/cliparts/flash-superhero-clipart-35.jpg" onclick="this.style.left='450px'">
+    </div>
+
+    <div class="buttons">
+        <button type="button" class="btn btn-secondary btn-sm">Login</button>
+        <button type="button" class="btn btn-warning btn-sm">Sign Up</button>
+    </div>
+
+    
     
 </body>
 </html>
